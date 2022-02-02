@@ -1,11 +1,26 @@
 :root {
     --primary: red;
+    --spacing: 4rem;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.neutral-theme {
+    background-color: white;
+    --button-color: var(--primary);
+    --button-hover-color: white;
+}
+
+.primary-theme {
+    color: white;
+    background-color: var(--primary);
+    --button-color: white;
+    --button-hover-color: var(--primary);
+}
+
+/* header styles */
 header {
     height: 100vh;
     display: flex;
@@ -24,8 +39,58 @@ h1 {
 
 .button {
     padding: 1rem;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--button-color);
     font-weight: bold;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--button-color);
+
+}
+
+.button:hover {
+    color: var(--button-hover-color);
+    background-color: var(--button-color);
+}
+/* end header styles */
+
+/* main styles */
+.about {
+    padding: var(--spacing);
+    color: white;
+    background-color: var(--primary);
+}
+
+h2 {
+    margin-bottom: var(--spacing);
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about-img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto var(--spacing);
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+/* media queries */
+@media (min-width: 800px) {
+    .about-container {
+        display: flex;
+    }
+
+    .about-text {
+        margin-left: var(--spacing);
+    }
 }
