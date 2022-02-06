@@ -38,7 +38,7 @@ h1 {
 }
 
 .button {
-    display: block;
+    display: inline-block;
     width: max-content;
     padding: 1rem;
     border: 2px solid var(--button-color);
@@ -67,6 +67,18 @@ h2 {
     text-transform: uppercase;
 }
 
+p {
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* about seciton */
 .about-container {
     max-width: 960px;
     margin: 0 auto;
@@ -84,11 +96,6 @@ h2 {
     filter: grayscale(0);
 }
 
-p {
-    margin-bottom: 1rem;
-    line-height: 1.4rem;
-}
-
 blockquote {
     margin-top: var(--spacing);
     font-size: 2rem;
@@ -102,6 +109,21 @@ cite {
     font-size: 1rem;
     font-style: normal;
 }
+/* end about section */
+
+/* project section */
+article {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.article-img {
+    margin-bottom: 2rem;
+}
+
+/* end project section */
+
+/* end main styles */
 
 /* media queries */
 @media (min-width: 800px) {
@@ -111,5 +133,17 @@ cite {
 
     .about-text {
         margin-left: var(--spacing);
+    }
+
+    article {
+        flex-direction: row;
+        max-width: 960px;
+        margin: 0 auto var(--spacing);
+    }
+
+    .article-img {
+        margin-left: 2rem;
+        max-width: 350px;
+        object-fit: cover;
     }
 }
