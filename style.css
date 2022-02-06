@@ -37,6 +37,29 @@ h1 {
     line-height: 1.4em;
 }
 
+/* this header link did not move arrow vertically aligned? */
+.header-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-link::after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 1rem;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.75rem solid var(--primary);
+
+}
+
+.header-link:hover::after {
+    border-top-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
 .button {
     display: inline-block;
     width: max-content;
@@ -80,6 +103,22 @@ h3 {
 }
 
 /* about seciton */
+.about {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+}
+
 .about-container {
     max-width: 960px;
     margin: 0 auto;
@@ -125,8 +164,22 @@ article {
 
 /* contact section */
 .contact {
+    position: relative;
+    margin-top: 100px;
     text-align: center;
 }
+
+.contact::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
+}
+
 /* end contact section */
 /* end main styles */
 
