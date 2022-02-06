@@ -120,8 +120,13 @@ article {
 .article-img {
     margin-bottom: 2rem;
 }
-
 /* end project section */
+
+/* contact section */
+.contact {
+    text-align: center;
+}
+/* end contact section */
 
 /* end main styles */
 
