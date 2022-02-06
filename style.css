@@ -51,6 +51,7 @@ h1 {
 .button:hover {
     color: var(--button-hover-color);
     background-color: var(--button-color);
+    transition: all 0.3s ease-in-out;
 }
 /* end header styles */
 
@@ -127,8 +128,57 @@ article {
     text-align: center;
 }
 /* end contact section */
-
 /* end main styles */
+
+/* footer styles */
+footer {
+    padding: var(--spacing);
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing);
+}
+
+.social-item {
+    margin: 0 2rem;
+}
+
+.social-link {
+    display: block;
+    width: 60px;
+    height: 60px;
+    font-size: 0px;
+    background: no-repeat;
+    background-size: 60px;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.linkedin {
+    background-image: url(images/linkedin.svg);
+}
+
+.twitter {
+    background-image: url(images/twitter.svg);
+}
+
+.github {
+    background-image: url(images/github.svg);
+}
+
+.youtube {
+    background-image: url(images/youtube.svg);
+}
+
+/* end footer styles */
 
 /* media queries */
 @media (min-width: 800px) {
