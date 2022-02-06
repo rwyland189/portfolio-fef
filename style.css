@@ -1,6 +1,9 @@
 :root {
     --primary: red;
+    --dk-grey: #333;
+    --max-width: 960px;
     --spacing: 4rem;
+    --img-width: 350px;
 }
 
 body {
@@ -32,7 +35,7 @@ header {
 
 h1 {
     margin-bottom: 2rem;
-    font-size: 5vw;
+    font-size: clamp(3rem, 5vw, 200rem);
     font-weight: bold;
     line-height: 1.4em;
 }
@@ -86,7 +89,7 @@ section {
 h2 {
     margin-bottom: var(--spacing);
     text-align: center;
-    font-size: 3vw;
+    font-size: clamp(3rem, 3vw, 200rem);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -120,14 +123,14 @@ h3 {
 }
 
 .about-container {
-    max-width: 960px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
 .about-img {
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: var(--img-width);
     margin: 0 auto var(--spacing);
     filter: grayscale(100%);
 }
@@ -187,7 +190,7 @@ article {
 footer {
     padding: var(--spacing);
     text-align: center;
-    background-color: #333;
+    background-color: var(--dk-grey);
     color: white;
 }
 
@@ -245,13 +248,13 @@ footer {
 
     article {
         flex-direction: row;
-        max-width: 960px;
+        max-width: var(--max-width);
         margin: 0 auto var(--spacing);
     }
 
     .article-img {
         margin-left: 2rem;
-        max-width: 350px;
+        max-width: var(--img-width);
         object-fit: cover;
     }
 }
