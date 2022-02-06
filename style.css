@@ -38,6 +38,8 @@ h1 {
 }
 
 .button {
+    display: block;
+    width: max-content;
     padding: 1rem;
     border: 2px solid var(--button-color);
     font-weight: bold;
@@ -53,10 +55,8 @@ h1 {
 /* end header styles */
 
 /* main styles */
-.about {
+section {
     padding: var(--spacing);
-    color: white;
-    background-color: var(--primary);
 }
 
 h2 {
@@ -77,11 +77,30 @@ h2 {
     width: 100%;
     max-width: 350px;
     margin: 0 auto var(--spacing);
+    filter: grayscale(100%);
+}
+
+.about-img:hover {
+    filter: grayscale(0);
 }
 
 p {
     margin-bottom: 1rem;
     line-height: 1.4rem;
+}
+
+blockquote {
+    margin-top: var(--spacing);
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
 }
 
 /* media queries */
