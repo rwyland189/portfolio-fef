@@ -40,6 +40,10 @@ h1 {
     line-height: 1.4em;
 }
 
+span {
+    color: var(--primary);
+}
+
 /* this header link did not move arrow vertically aligned? */
 .header-link {
     display: flex;
