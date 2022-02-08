@@ -44,7 +44,23 @@ span {
     color: var(--primary);
 }
 
-/* this header link did not move arrow vertically aligned? */
+.button {
+    display: inline-block;
+    width: max-content;
+    padding: 1rem;
+    border: 2px solid var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--button-color);
+
+}
+
+.button:hover {
+    color: var(--button-hover-color);
+    background-color: var(--button-color);
+    transition: all 0.3s ease-in-out;
+}
+
 .header-link {
     display: flex;
     align-items: center;
@@ -67,22 +83,7 @@ span {
     transition: all 0.3s ease-in-out;
 }
 
-.button {
-    display: inline-block;
-    width: max-content;
-    padding: 1rem;
-    border: 2px solid var(--button-color);
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--button-color);
 
-}
-
-.button:hover {
-    color: var(--button-hover-color);
-    background-color: var(--button-color);
-    transition: all 0.3s ease-in-out;
-}
 /* end header styles */
 
 /* main styles */
